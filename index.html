@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" style="margin-bottom: 200px;">
+        <div class="head-content">
+            <p>Nhập vào giá trị</p>
+            <input class="form-control d-inline w-25" id="nhap-so">
+            <button id="btnThemMang" class="btn btn-success my-2">Thêm giá trị N</button>
+            <div class="alert alert-danger" id="hienThiMang"></div>
+        </div>
+
+        <div class="main-content">
+            <!-- Bài 1 -->
+            <div class="dropdown">
+                <button class="btn btn-success " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left; width: 500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">1</span><span
+                        style="margin-left: 30px;display: inline-block;"> Tổng các số dương trong mảng </span><i
+                        class="fa fa-circle-chevron-down" style="margin-left: 100px;"></i>
+                </button>
+                <ul class=" dropdown-menu ">
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 10px;"
+                        id="btnTinhTong">Tính Tổng</button>
+                    <div class=" alert alert-success" id="tongSoDuong" style="width: 200px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Bài 2 -->
+            <div class="dropdown">
+                <button class="btn btn-success " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left;width: 500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">2</span><span
+                        style="margin-left: 30px;display: inline-block;"> Có bao nhiêu số dương trong mảng <i
+                            class="fa fa-circle-chevron-down" style="padding-left: 65px;"></i></span>
+                </button>
+                <ul class="dropdown-menu ">
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 10px;" id="btnDemSo"> Đếm
+                        số </button>
+                    <div class=" alert alert-success" id="demSoDuong" style="width: 200px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Bài 3 -->
+            <div class="dropdown">
+                <button class="btn btn-success " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left;width: 500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">3</span><span
+                        style="margin-left: 30px;display: inline-block;"> Số nhỏ nhất trong mảng <i
+                            class="fa fa-circle-chevron-down" style="padding-left: 145px;"></i></span>
+                </button>
+                <ul class="dropdown-menu ">
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 10px;" id="btnTimSoNho">
+                        Tìm số nhỏ nhất </button>
+                    <div class=" alert alert-success" id="timSoNhoNhat" style="width: 200px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Bài 4 -->
+            <div class="dropdown">
+                <button class="btn btn-success " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left;width: 500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">4</span><span
+                        style="margin-left: 30px;display: inline-block;"> Số dương nhỏ nhất trong mảng <i
+                            class="fa fa-circle-chevron-down" style="padding-left: 94px;"></i></span>
+                </button>
+                <ul class="dropdown-menu ">
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 10px;"
+                        id="btnTimSoDuongNho">Tìm số dương nhỏ nhất</button>
+                    <div class=" alert alert-success" id="timSoDuongNhoNhat" style="width: 192px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Bài 5 -->
+            <div class="dropdown">
+                <button class="btn btn-success  " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left;width: 500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">5</span><span
+                        style="margin-left: 30px;display: inline-block;"> Số chẵn cuối cùng <i
+                            class="fa fa-circle-chevron-down" style="padding-left: 190px;"></i></span>
+                </button>
+                <ul class="dropdown-menu ">
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 10px;"
+                        id="btnTimSoChan">Tìm
+                        số chẵn</button>
+                    <div class=" alert alert-success" id="timSoChanCuoiCung" style="width: 200px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Bài 6 -->
+            <div class="dropdown">
+                <button class="btn btn-success" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left;width:500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">6</span><span
+                        style="margin-left: 30px;display: inline-block;"> Đổi chổ <i class="fa fa-circle-chevron-down"
+                            style="padding-left: 265px;"></i></span>
+                </button>
+                <ul class="dropdown-menu ">
+                    <input class="form-control d-inline w-25" id="nhap-so-1" placeholder="Nhập số 1"
+                        style="margin: 0 20px;">
+                    <input class="form-control d-inline w-25" id="nhap-so-2" placeholder="Nhập số 2">
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 10px; margin-left: 12px;"
+                        id="btnDoiCho"> Đổi Chổ </button>
+                    <div class=" alert alert-success" id="doicho" style="width: 400px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Bài 7 -->
+            <div class="dropdown">
+                <button class="btn btn-success " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left;width: 500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">7</span><span
+                        style="margin-left: 30px;display: inline-block;"> Sắp xếp tăng dần <i
+                            class="fa fa-circle-chevron-down" style="padding-left: 196px;"></i></span>
+                </button>
+                <ul class="dropdown-menu ">
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 10px;" id="btnSapXep">Sắp
+                        xếp</button>
+                    <div class=" alert alert-success" id="sapXep" style="width: 200px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Bài 8 -->
+            <div class="dropdown">
+                <button class="btn btn-success " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left;width: 500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">8</span><span
+                        style="margin-left: 30px;display: inline-block;"> Tìm số nguyên tố đầu tiên <i
+                            class="fa fa-circle-chevron-down" style="padding-left: 134px;"></i></span>
+                </button>
+                <ul class="dropdown-menu ">
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 10px;" id="btnTimSo">Tìm
+                        số</button>
+                    <div class=" alert alert-success" id="timSo" style="width: 200px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Bài 9 -->
+            <div class="dropdown">
+                <button class="btn btn-success  " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left;width:500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">9</span><span
+                        style="margin-left: 30px;display: inline-block;"> Đếm số nguyên <i
+                            class="fa fa-circle-chevron-down" style="padding-left: 207px;"></i></span>
+                </button>
+                <ul class="dropdown-menu ">
+                    <input class="form-control d-inline" id="nhap-so-bai-9" placeholder="Nhập số "
+                        style="width: 100px;margin:  0 20px;">
+                    <button class="btn btn-primary" style="margin-left:-3px; margin-bottom: 6px;" id="btnThemSo9">Thêm
+                        Số</button>
+                    <div class=" alert alert-success" id="themSo9" style="width: 400px; margin: 0 20px;">
+                    </div>
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 6px; margin-top: 6px;"
+                        id="btnDemSoBai9">Đếm Số</button>
+                    <div class=" alert alert-success" id="demSoBai9" style="width: 200px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Bài 10 -->
+            <div class="dropdown">
+                <button class="btn btn-success " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="text-align: left;width: 500px;margin-bottom: 15px;">
+                    <span
+                        style="width: 20px; height: 20px;display: inline-block; background-color: rgb(255, 255, 255); color: rgb(11, 156, 21);justify-content: center; text-align: center; border-radius: 5px;">10</span><span
+                        style="margin-left: 30px;display: inline-block;"> So sánh số lượng số âm và số dương<i
+                            class="fa fa-circle-chevron-down" style="padding-left: 61px;"></i></span>
+                </button>
+                <ul class="dropdown-menu ">
+                    <button class="btn btn-primary" style="margin-left: 20px; margin-bottom: 10px;" id="btnSoSanh10">So
+                        sánh</button>
+                    <div class=" alert alert-success" id="soSanh10" sty le="width: 200px; margin: 0 20px;">
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- js Custoom -->
+    <script src="/index.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
